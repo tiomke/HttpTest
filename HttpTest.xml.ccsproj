@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<GameProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectDir>E:\1MyDoc\MyWork\Cocos2d-x\3.0Work\HttpTest</ProjectDir>
+  <Version>1.4.0.1</Version>
+  <Resources>E:\1MyDoc\MyWork\Cocos2d-x\3.0Work\HttpTest</Resources>
+  <Name>HttpTest</Name>
+  <JsonFileName>HttpTest.json</JsonFileName>
+  <CanvasSize>
+    <Width>480</Width>
+    <Height>320</Height>
+  </CanvasSize>
+  <filePath>E:\1MyDoc\MyWork\Cocos2d-x\3.0Work\HttpTest\HttpTest.xml.ccsproj</filePath>
+  <ProjectType>GameProject</ProjectType>
+  <ResRelativePath />
+  <ResProjFolder>E:\1MyDoc\MyWork\Cocos2d-x\3.0Work\HttpTest\CocoStudio\ccsprojs</ResProjFolder>
+  <AssetsDir>E:\1MyDoc\MyWork\Cocos2d-x\3.0Work\HttpTest\CocoStudio\assets</AssetsDir>
+  <LanaguageType>cpp</LanaguageType>
+</GameProject>
