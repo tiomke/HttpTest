@@ -64,20 +64,20 @@ bool HelloWorld::init()
     //auto label = LabelTTF::create("Hello World", "Arial", 24);
     
     // position the label on the center of the screen
-    label->setPosition(Point(origin.x + visibleSize.width/2,
+    requestBtn->setPosition(Point(origin.x + visibleSize.width/2,
                             origin.y + visibleSize.height - label->getContentSize().height));
 
     // add the label as a child to this layer
     //this->addChild(label, 1);
 
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
+    //auto sprite = Sprite::create("HelloWorld.png");
 
-    // position the sprite on the center of the screen
-    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    //// position the sprite on the center of the screen
+    //sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
+    //// add the sprite as a child to this layer
+    //this->addChild(sprite, 0);
     
     return true;
 }
@@ -124,28 +124,30 @@ void HelloWorld::menuRequestCallback(Ref* pSender)
 void HelloWorld::onHttpResponseComplete(HttpClient* client, HttpResponse* response)
 {
 	//接收数据并显示
+	CCLOG("1-------HelloWorld::onHttpResponseComplete enter!! ");
 
 	if (!response) return;
 
-	freopen("CONIN$","r",stdin);
-	freopen("CONOUT$","w",stdout);
-	freopen("CONOUT$","w",stderr);
+	CCLOG("2---HelloWorld::onHttpResponseComplete enter!! ");
+	//freopen("CONIN$","r",stdin);
+	//freopen("CONOUT$","w",stdout);
+	//freopen("CONOUT$","w",stderr);
 
 	//获取响应的tag
 	if (0 != strlen(response->getHttpRequest()->getTag()))
 	{
-		printf("response tag: %s is completed!\n",response->getHttpRequest()->getTag());
+		CCLOG("response tag: %s is completed!\n",response->getHttpRequest()->getTag());
 	}
 	
 	//获取状态码
 	int stateCode = response->getResponseCode();
-	printf("stateCode: %d\n",stateCode);
+	CCLOG("stateCode: %d\n",stateCode);
 	std::vector<char>* pData = response->getResponseData();//
 
 	for (int i = 0; i < pData->size(); i++)
 	{
-		printf("%c",(*pData)[i]);
+		CCLOG("%c",(*pData)[i]);
 	}
-	printf("\n");
+	CCLOG("\n");
 
 }
